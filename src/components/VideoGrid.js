@@ -101,36 +101,38 @@ const videos = [
 
 const VideoGrid = () => {
   return (
-    <div className="container mx-auto px-4 py-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {videos.map((video) => (
-          <div key={video.id} className="video-card">
-            {/* Video Player */}
-            <video
-              controls
-              className="w-full rounded-lg"
-              poster={video.thumbnail}
-            >
-              <source src={video.videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="flex mt-2">
-              <img
-                className="w-10 h-10 rounded-full"
-                src={video.channelImage}
-                alt={video.title}
-              />
-              <div className="ml-3">
-                <h3 className="text-white font-medium leading-tight">
-                  {video.title}
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  {video.views} · {video.timestamp}
-                </p>
+    <div className=" bg-black bg-opacity-90 backdrop-blur-sm overflow-auto">
+      <div className="container mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {videos.map((video) => (
+            <div key={video.id} className="video-card">
+              {/* Video Player */}
+              <video
+                controls
+                className="w-full rounded-lg"
+                poster={video.thumbnail}
+              >
+                <source src={video.videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="flex mt-2">
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={video.channelImage}
+                  alt={video.title}
+                />
+                <div className="ml-3">
+                  <h3 className="text-white font-medium leading-tight">
+                    {video.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    {video.views} · {video.timestamp}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
