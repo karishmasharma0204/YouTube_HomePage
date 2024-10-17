@@ -1,9 +1,8 @@
-// components/Sidebar.js
 import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar h-screen w-60 bg-black text-white p-4 space-y-4 overflow-y-auto">
+    <div className="sidebar h-screen-full w-60 bg-black text-white p-4 space-y-4 overflow-y-auto">
       {/* Home Section */}
       <div className="space-y-2">
         <a
@@ -126,18 +125,6 @@ const Sidebar = () => {
             className="rounded-full"
           />
           <span>JioCinema Kids</span>
-          <span className="ml-auto text-red-600">●</span>
-        </a>
-        <a
-          href="#"
-          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700"
-        >
-          <img
-            src="https://via.placeholder.com/24"
-            alt="JioCinema Kids"
-            className="rounded-full"
-          />
-          <span>Code Karo</span>
           <span className="ml-auto text-red-600">●</span>
         </a>
       </div>
