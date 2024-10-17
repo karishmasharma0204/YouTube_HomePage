@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar h-screen-full w-60 bg-black text-white p-4 space-y-4 overflow-y-auto">
+    <div className="sidebar h-screen-full w-60 bg-black text-white p-4 space-y-4 overflow-y-auto sm:block hidden">
       {/* Home Section */}
       <div className="space-y-2">
         <a
