@@ -8,9 +8,9 @@ function App() {
     <div className="app">
       <Navbar />
       <div className="flex">
-        <Sidebar />
-        <main className="main-content flex-grow bg-gray-800">
-          <div className="filter-bar p-4">
+        <Sidebar className="hidden sm:block" />
+        <main className="main-content flex-grow bg-black ">
+          <div className="ffilter-bar p-5  flex-wrap justify-center sm:block hidden">
             <button className="bg-gray-700 text-white py-2 px-4 rounded-md">
               All
             </button>
@@ -37,15 +37,6 @@ function App() {
             </button>
             <button className="bg-gray-700 text-white py-2 px-4 rounded-md ml-2">
               Bootstrap
-            </button>
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-md ml-2">
-              Tailwind CSS
-            </button>
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-md ml-2">
-              Python
-            </button>
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-md ml-2">
-              JioCinematics
             </button>
           </div>
           <VideoGrid />
