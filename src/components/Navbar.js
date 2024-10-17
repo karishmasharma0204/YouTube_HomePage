@@ -99,12 +99,11 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu: Show Sidebar when isMenuOpen is true */}
       {isMenuOpen && (
-        <div className="absolute top-12 left-0 w-full bg-black p-4 md:hidden">
-          <div className="flex flex-col space-y-2">
-            <Sidebar />
-          </div>
+        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex ">
+          <Sidebar className="hidden sm:block" />
+          <div className="flex-grow" onClick={() => setIsMenuOpen(false)}></div>
         </div>
       )}
     </nav>
